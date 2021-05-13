@@ -1,0 +1,9 @@
+git status # Проверяем на какой ветке находимся
+git checkout dev #Переходим на ветку dev
+echo "###May be in future">>Readme.md #создаем файл  Readme.md с фразой
+git add Readme.md #начинаем отслеживать новый файл
+git -m commit "Create new file"  #комитим файл c флагом -m что позволяет комитить прямо в строке 
+git push #сливаем наши изменения на git
+Username for 'https://github.com': #вводим логин
+Password for 'https://git@example.com': #вводим пароль
+

@@ -1,0 +1,14 @@
+#1 Выведите 5 записей из коллекции posts пропустив первые 5
+db.posts.find().skip(5).limit(5)
+
+#2 Выведите все записи у которых like больше 100
+db.posts.find({"properties.like":{$gt: 100}})
+
+#3 Добавьте новую запись в коллекцию posts
+db.posts.insertOne({"properties": { "title":"Путь в никуда","content": "Путеводитель","author":"Гари Пот","like":200,"dislike":300} } )
+
+#4 Выведите список авторов и их общее количество like
+db.posts.find( { }, {"properties.author": 1, _id:0 } ) # список всех авторов 
+
+!!!! а вот как сумму не знаю.
+

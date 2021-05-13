@@ -1,0 +1,119 @@
+# Опишите все известные вам способы позиционирования 5 элементов по центру, каждый из которых должен занимать 20%.
+# 1 способ используя таблицу
+<table cellpadding="0" cellspacing="0" width="100%" border="0">
+   <tr>
+      <td width="20%"></td>
+      <td width="20%"></td>
+      <td width="20%"></td>
+      <td width="20%"></td>
+      <td width="20%"></td>
+   </tr>
+</table>
+# 2 способ используя CSS и таблици
+<style>
+     .equalDivide tr td { width:20%; }
+</style>
+
+<table class="equalDivide" cellpadding="0" cellspacing="0" width="100%" border="0">
+   <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+   </tr>
+</table>
+
+
+#3 способ через через div элементы 
+<style type="text/css">
+.inthis{
+text-align:center;
+width:100%;
+}
+.block{
+width:19%;
+height:20%;
+display:inline-block;
+vertical-align: middle;
+}
+</style>
+    <dic id="app" class="container">
+        <div class="inthis">
+            <div class="block">Первый блок</div>
+            <div class="block">Второй блок</div>
+            <div class="block">Третий блок</div>
+            <div class="block">Четвертый блок</div>
+            <div class="block">Пятый блок</div>
+        </div>
+    </dic>
+
+#Опишите все известные вам способы позиционирования модального окна, по центру экрана.
+#Если габариты модального окна заданы, то все просто:
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -75px;
+}
+.modal_container {
+    background-color: #fff;
+    width: 200px;
+    height: 150px;
+}
+<div class="fixed-overlay">
+    <div class="modal">
+        <div class="modal_container">    
+        </div>
+    </div>
+</div>
+
+#Напишите стили для кнопки, которая может иметь несколько состояний: active, disabled, danger. Цвета произвольные.
+.active{
+	background-color: #4CAF50;
+}
+.active:hover
+	background-color: #3AAC10;
+}
+.disabled{
+	background-color: #AACF5A;
+}
+.disabled:hover{
+	background-color: #FACFFA;
+}
+.danger{
+	background-color: #3AAC10;
+}
+.danger:hover{
+	background-color: #3AAC10;
+}
+
+
+#Сверстайте страницу логина, которая должна содержать только форму с полями email, password.
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<body>
+    <form class="form-1" align="center">
+        <p class="field">
+            <input type="text" name="login" placeholder="Eмэйл">
+            <i class="icon-user icon-large"></i>
+        </p>
+        <p class="field">
+            <input type="password" name="password" placeholder="Пароль">
+            <i class="icon-lock icon-large"></i>
+        </p>
+        <p class="submit">
+            <button type="submit" name="submit">Нажми</button>
+        </p>
+    </form>
+</body>
+</html>

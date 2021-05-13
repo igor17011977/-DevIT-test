@@ -1,0 +1,100 @@
+#1 Напишите функцию cloneDeep таким образом, чтобы она была способна клонировать переданный как параметр объект.
+ let user = {
+        name: "Игорь",
+        age: 43
+    };
+    let clone = {}; // новый пустой объект
+    // скопируем все свойства user в него
+    function cloneDeep(user){
+        for (let key in user) {
+            clone[key] = user[key];
+        }
+    }
+    // теперь в переменной clone находится абсолютно независимый клон объекта
+    clone.name = "Пётр"; // изменим в нём данные
+   console.log( user.name ); // в оригинальном объекте значение свойства `name` осталось прежним.
+   console.log(clone.name) // новое значение свойства `name` .
+
+#2 Свертка. Используйте метод reduce в комбинации с concat для свёртки массива массивов в один массив, у которого есть все элементы входных массивов.
+var arrays = [[1, 2, 3], [4, 5], [6]];
+var flattened = arrays.reduce(function(a, b) {
+    return a.concat(b);
+});
+console.log(flattened);
+
+
+#3.  Допустим, у вас есть функция primitiveMultiply, которая в 50% случаев перемножает 2 числа, а в остальных случаях выбрасывает исключение типа MultiplicatorUnitFailure. 
+#Напишите функцию, обёртывающую эту, и просто вызывающую её до тех пор, пока не будет получен успешный результат.
+
+????????
+
+#4 Расширить прототип Array, добавив к нему метод добавления элемента в начало без использование unshift.
+var arr = [1, 2, 3];
+Array.prototype.append=function(...args){
+    return [...args, ...this];
+};
+
+arr=arr.append(0);
+console.log(arr);
+
+#5 Выведите все элементы массива используя рекурсию.
+var arr = ['Solnce', 'vishlo', 'iz', 'za', 'tuchi'];
+function recuseLog() {
+    console.log(arr.shift());
+
+    if (arr.length != 0) {
+        recuseLog();
+    }
+}
+
+recuseLog(arr);
+
+#6 Написать функцию для выполнения параллельных вычислений без использования Promise.
+
+???????? не знаю
+
+#7  7. Сделать функцию поиска значений в массиве.
+
+!!!!! не знаю
+
+#8  Сделать функцию которая обрезает массив до указанного значения.
+function array_skip_until(arr,searchElement){
+    var c= arr.indexOf(searchElement)
+    if (c===-1){var z=[ ]}
+    else {
+        var z = arr.slice(c)
+        console.log(z)
+    }
+}
+let result = array_skip_until(testData, 2)
+let result2 = array_skip_until(testData,"Rafshan")
+let result3 = array_skip_until(testData, "asd")
+
+# 9. Создать функцию которая нормализует данные в массиве исключая или преобразуя не подходящие.
+
+!!!!! не знаю
+
+#10 Сделать функцию которая возвращает уникальные элементы массива.
+function onlyUnique(value, index, self) {
+    return self.indexOf(value) === index;
+}
+let result = (testData.concat(testData2)).filter(onlyUnique)
+console.log(result)
+
+#11. Сделать функцию которая сможет делать срез данных с ассоциативного массива.
+
+
+#12 Создать функцию которая создает объект на основании двух представленных массивов используя один как ключи, а другой как значения. 
+#Не подходящие ключи массивов должны быть исключены.
+var arr = {};
+function array_combine(index, value) {
+    for (let i = 0; i < index.length; i += 1) {
+        if (String(index[i])==="false" || String(index[i])==="true" ){}
+        else {
+        arr[index[i]] = value[i]}
+    }
+}
+
+let result = array_combine(testData, testData2)
+console.log(arr)
+
